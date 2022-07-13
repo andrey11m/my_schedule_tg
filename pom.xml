@@ -14,7 +14,7 @@
     <name>my_schedule_tg</name>
     <description>my_schedule_tg</description>
     <properties>
-        <java.version>17</java.version>
+        <java.version>11</java.version>
     </properties>
     <dependencies>
         <dependency>
