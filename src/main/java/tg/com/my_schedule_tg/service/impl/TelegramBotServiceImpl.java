@@ -7,13 +7,18 @@ import com.pengrad.telegrambot.model.Update;
 import com.pengrad.telegrambot.request.SendMessage;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import tg.com.my_schedule_tg.repo.TgUserRepo;
 import tg.com.my_schedule_tg.service.TelegramBotService;
+import tg.com.my_schedule_tg.service.TgUserService;
+
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
 public class TelegramBotServiceImpl implements TelegramBotService {
 
     private final TelegramBot bot;
+    private final TgUserService userService;
 
     public void serve() {
         bot.setUpdatesListener(updates -> {
@@ -24,7 +29,7 @@ public class TelegramBotServiceImpl implements TelegramBotService {
 
     private void process(Update update) {
         Message message = update.message();
-        long chatId = message.chat().id();
-        bot.execute(new SendMessage(chatId, message.text()));
+        bot.execute(new SendMessage(message.chat().id(), "hello"));
+
     }
 }
