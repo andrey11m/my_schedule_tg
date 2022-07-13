@@ -1,0 +1,12 @@
+server:
+  port: ${PORT:3500}
+spring:
+  datasource:
+    username: xavoeecbmbygaq
+    password: d14e9dca45ffdb5bd962d611167c37593e7ef29e43067ae67ebf79fdc6f7f286
+    url: jdbc:postgresql://ec2-34-248-169-69.eu-west-1.compute.amazonaws.com:5432/d7uik7l9n5ll62
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+telegram:
+  token: 5538250997:AAHZXEfcSMl3gLanvC2VbulUqwThZ13-E8U
