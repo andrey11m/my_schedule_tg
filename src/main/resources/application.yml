@@ -7,6 +7,6 @@ spring:
     url: jdbc:postgresql://ec2-34-248-169-69.eu-west-1.compute.amazonaws.com:5432/d7uik7l9n5ll62
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: validate
 telegram:
   token: 5538250997:AAHZXEfcSMl3gLanvC2VbulUqwThZ13-E8U

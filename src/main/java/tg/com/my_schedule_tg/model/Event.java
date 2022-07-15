@@ -1,15 +1,9 @@
 package tg.com.my_schedule_tg.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import java.sql.Date;
+import javax.persistence.*;
+import java.time.LocalDateTime;
 
 @Entity
 @Data
@@ -23,6 +17,7 @@ public class Event {
     private Long id;
 
     private String name;
-    private String description;
-    private Date date;
+    private LocalDateTime dateTime;
+    private String state;
+    private Long userId;
 }
